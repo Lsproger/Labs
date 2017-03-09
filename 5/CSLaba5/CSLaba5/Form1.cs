@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSLaba3
+namespace CSLaba5
 {
     public partial class Form1 : Form
     {

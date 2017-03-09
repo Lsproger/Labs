@@ -1,4 +1,4 @@
-﻿namespace CSLaba3
+﻿namespace CSLaba5
 {
     partial class Form1
     {
