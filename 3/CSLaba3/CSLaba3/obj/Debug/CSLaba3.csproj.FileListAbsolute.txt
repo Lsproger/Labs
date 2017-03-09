@@ -1,0 +1,11 @@
+D:\Учёба\ООП\Лабы\3\CSLaba3\CSLaba3\bin\Debug\CSLaba3.exe.config
+D:\Учёба\ООП\Лабы\3\CSLaba3\CSLaba3\bin\Debug\CSLaba3.exe
+D:\Учёба\ООП\Лабы\3\CSLaba3\CSLaba3\bin\Debug\CSLaba3.pdb
+D:\Учёба\ООП\Лабы\3\CSLaba3\CSLaba3\obj\Debug\CSLaba3.exe
+D:\Учёба\ООП\Лабы\3\CSLaba3\CSLaba3\obj\Debug\CSLaba3.pdb
+D:\Учёба\ООП\2 семестр\Лабы\3\CSLaba3\CSLaba3\bin\Debug\CSLaba3.exe.config
+D:\Учёба\ООП\2 семестр\Лабы\3\CSLaba3\CSLaba3\bin\Debug\CSLaba3.exe
+D:\Учёба\ООП\2 семестр\Лабы\3\CSLaba3\CSLaba3\bin\Debug\CSLaba3.pdb
+D:\Учёба\ООП\2 семестр\Лабы\3\CSLaba3\CSLaba3\obj\Debug\CSLaba3.exe
+D:\Учёба\ООП\2 семестр\Лабы\3\CSLaba3\CSLaba3\obj\Debug\CSLaba3.pdb
+D:\Учёба\ООП\2 семестр\Лабы\3\CSLaba3\CSLaba3\obj\Debug\CSLaba3.csprojResolveAssemblyReference.cache

@@ -1,0 +1,15 @@
+D:\OOP\Laba 1\Laba 1\bin\Debug\Laba 1.exe.config
+D:\OOP\Laba 1\Laba 1\bin\Debug\Laba 1.exe
+D:\OOP\Laba 1\Laba 1\bin\Debug\Laba 1.pdb
+D:\OOP\Laba 1\Laba 1\obj\Debug\Laba 1.csprojResolveAssemblyReference.cache
+D:\OOP\Laba 1\Laba 1\obj\Debug\Laba 1.exe
+D:\OOP\Laba 1\Laba 1\obj\Debug\Laba 1.pdb
+D:\Учёба\ООП\Лабы\1\Laba 1\Laba 1\bin\Debug\Laba 1.exe.config
+D:\Учёба\ООП\Лабы\1\Laba 1\Laba 1\obj\Debug\Laba 1.exe
+D:\Учёба\ООП\Лабы\1\Laba 1\Laba 1\obj\Debug\Laba 1.pdb
+D:\Учёба\ООП\Лабы\1\Laba 1\Laba 1\bin\Debug\Laba 1.exe
+D:\Учёба\ООП\Лабы\1\Laba 1\Laba 1\bin\Debug\Laba 1.pdb
+D:\Учёба\ООП\Лабы\1\Laba 1\Laba 1\obj\Debug\Laba 1.csprojResolveAssemblyReference.cache
+D:\Учёба\ООП\2 семестр\Лабы\1\Laba 1\Laba 1\bin\Debug\Laba 1.exe.config
+D:\Учёба\ООП\2 семестр\Лабы\1\Laba 1\Laba 1\obj\Debug\Laba 1.exe
+D:\Учёба\ООП\2 семестр\Лабы\1\Laba 1\Laba 1\obj\Debug\Laba 1.pdb
