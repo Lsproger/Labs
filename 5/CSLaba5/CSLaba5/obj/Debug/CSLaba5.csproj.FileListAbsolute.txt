@@ -17,3 +17,4 @@ D:\Учёба\ООП\2 семестр\Labs\5\CSLaba5\CSLaba5\obj\Debug\CSLaba5.p
 D:\Учёба\ООП\2 семестр\Labs\5\CSLaba5\CSLaba5\bin\Debug\CSLaba5.exe
 D:\Учёба\ООП\2 семестр\Labs\5\CSLaba5\CSLaba5\bin\Debug\CSLaba5.pdb
 D:\Учёба\ООП\2 семестр\Labs\5\CSLaba5\CSLaba5\obj\Debug\CSLaba5.Properties.Resources.resources
+D:\Учёба\ООП\2 семестр\Labs\5\CSLaba5\CSLaba5\obj\Debug\CSLaba5.csprojResolveAssemblyReference.cache
