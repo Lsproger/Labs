@@ -1,0 +1,8 @@
+D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\bin\Debug\Calculator.exe.config
+D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\obj\Debug\Calculator.FCalc.resources
+D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\obj\Debug\Calculator.exe
+D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\obj\Debug\Calculator.pdb

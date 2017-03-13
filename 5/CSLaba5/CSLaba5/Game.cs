@@ -45,21 +45,14 @@ namespace CSLaba5
                 buffH = GFindAlive();
                 buffH.Attack(RFindAlive());
                 chat[numbOfTerms + 1] = "Green attacks Red for -" + buffH.Damage + "hp!\n  ***RED TEAM TURN!***";
-                //if () == true)
-                //{
-                //    chat[numbOfTerms + 2] = "GAME IS OVER!!!";
-                //}
+
             }
             else
             {
                 buffH = RFindAlive();
                 buffH.Attack(GFindAlive());
                 chat[numbOfTerms + 1] = "Red attacks Green for -" + buffH.Damage + "hp!\n  ***GREEN TEAM TURN!***";
-                //if (IsDestr(GArmy) == true)
-                //{
-                //    chat[numbOfTerms + 2] = "GAME IS OVER!!!";
 
-                //}
             }
             numbOfTerms++;
             queue++;
@@ -103,15 +96,32 @@ namespace CSLaba5
         {
             if (queue % 2 == 0)
             {
+                bool check = false;
+                for (int i=0; i< 10; i++)
+                {
+                    if (GArmy[i].Health == GArmy[i].maxHealth || GArmy[i].IsDead() == true)
+                    {
+                        return GArmy[0];
+                    } 
+                }
+                
                 int Gh = R.Next(10);
                 if (GArmy[Gh].Health != GArmy[Gh].maxHealth && GArmy[Gh].IsDead() != true)
                 {
                     return GArmy[Gh];
                 }
                 else return Injured();
-            }
+                }
+            
             else
             {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (RArmy[i].Health == RArmy[i].maxHealth || RArmy[i].IsDead() == true)
+                    {
+                        return RArmy[0];
+                    }
+                }
                 int Rh = R.Next(10);
                 if (RArmy[Rh].Health != RArmy[Rh].maxHealth && RArmy[Rh].IsDead() != true)
                 {

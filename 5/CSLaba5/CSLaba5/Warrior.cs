@@ -3,8 +3,11 @@
 namespace CSLaba5
 {
     public delegate string Str(Warrior w);
+    
     public abstract class Warrior
     {
+
+       // public Del d = x => 10;
         public void WriteToFile(string location, string contents)
         {
             System.IO.File.WriteAllText(location, contents);

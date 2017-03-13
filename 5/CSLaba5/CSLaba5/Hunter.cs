@@ -4,6 +4,7 @@ namespace CSLaba5
 {
     public class Hunter : Warrior, Actions
     {
+        public delegate void Del();
         public Hunter()
         {
 
@@ -91,6 +92,19 @@ namespace CSLaba5
         public void PrintSmth(string slovo)
         {
             Console.WriteLine("Лол кек " + slovo);
+        }
+        public event Del NewEv;
+        public void M()
+        {
+            NewEv += Hunter_NewEv;
+            NewEv();
+            
+        }
+
+        public void Hunter_NewEv()
+        {
+            Console.WriteLine("Vau, sobitie!");
+            
         }
     }
 }
