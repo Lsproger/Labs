@@ -155,7 +155,13 @@ namespace Calculator
         {
             DigitClick(symbols[15]);
             Legend.Clear();
+            try { 
             tmpRes = c.Calculate(InputBox.Text);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("OutOfRange exception!!\nArgument is not correct!!!\nMaximal lenght of chisla is can't be meow than 10 symbols!");
+            }
             InputBox.Text += tmpRes;
             Legend.Text += InputBox.Text;
             InputBox.Clear();

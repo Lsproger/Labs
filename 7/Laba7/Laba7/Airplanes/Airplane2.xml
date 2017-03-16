@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <crewNumb>1</crewNumb>
+  <crewMember>
+    <CrewMember>
+      <Firstname>Yury</Firstname>
+      <Surname>The</Surname>
+      <Patronymic>Pilot</Patronymic>
+      <Post>First pilot</Post>
+      <Age>22</Age>
+      <Experience>15</Experience>
+    </CrewMember>
+  </crewMember>
+  <Id>2</Id>
+  <Type>Military</Type>
+  <Model>MilitaryPlane</Model>
+  <Places>0</Places>
+  <IssueYear>2015</IssueYear>
+  <Carrying>1500</Carrying>
+  <LastService>10 августа 2016 г.</LastService>
+</Airplane>

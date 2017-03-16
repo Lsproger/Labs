@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <crewNumb>1</crewNumb>
+  <crewMember>
+    <CrewMember>
+      <Firstname>Snova</Firstname>
+      <Surname>One</Surname>
+      <Patronymic>Pilot</Patronymic>
+      <Post>First pilot</Post>
+      <Age>59</Age>
+      <Experience>22</Experience>
+    </CrewMember>
+  </crewMember>
+  <Id>3</Id>
+  <Type>Passenger</Type>
+  <Model>Plane</Model>
+  <Places>55</Places>
+  <IssueYear>2016</IssueYear>
+  <Carrying>1</Carrying>
+  <LastService>3 марта 2017 г.</LastService>
+</Airplane>

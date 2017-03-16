@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <crewNumb>3</crewNumb>
+  <crewMember>
+    <CrewMember>
+      <Firstname>Yury</Firstname>
+      <Surname>First</Surname>
+      <Patronymic>Pilot</Patronymic>
+      <Post>First pilot</Post>
+      <Age>19</Age>
+      <Experience>1</Experience>
+    </CrewMember>
+    <CrewMember>
+      <Firstname>Dmitry</Firstname>
+      <Surname>Second</Surname>
+      <Patronymic>Pilot</Patronymic>
+      <Post>Second pilot</Post>
+      <Age>20</Age>
+      <Experience>2</Experience>
+    </CrewMember>
+    <CrewMember>
+      <Firstname>Ann</Firstname>
+      <Surname>The</Surname>
+      <Patronymic>Hostess</Patronymic>
+      <Post>Hostess</Post>
+      <Age>21</Age>
+      <Experience>1</Experience>
+    </CrewMember>
+  </crewMember>
+  <Id>1</Id>
+  <Type>Passenger</Type>
+  <Model>Airbus</Model>
+  <Places>0</Places>
+  <IssueYear>2017</IssueYear>
+  <Carrying>1000</Carrying>
+  <LastService>2 марта 2017 г.</LastService>
+</Airplane>

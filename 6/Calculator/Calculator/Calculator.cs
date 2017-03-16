@@ -11,6 +11,7 @@ namespace Calculator
         {
             string s1 = null;
             string s2 = null;
+            
             for (int i = 0; i < str.Length; i++)
             {
                 if (str[i] == '+' || str[i] == '-' || str[i] == '*' || str[i] == '/')

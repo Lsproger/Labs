@@ -6,3 +6,4 @@ D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\bin\Debug\Cal
 D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\bin\Debug\Calculator.pdb
 D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\obj\Debug\Calculator.exe
 D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\Учёба\ООП\2 семестр\Labs\6\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
