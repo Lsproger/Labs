@@ -62,7 +62,6 @@
             this.listPlanes.Size = new System.Drawing.Size(498, 355);
             this.listPlanes.Sorted = true;
             this.listPlanes.TabIndex = 2;
-            this.listPlanes.SelectedIndexChanged += new System.EventHandler(this.listPlanes_SelectedIndexChanged);
             // 
             // FAirport
             // 

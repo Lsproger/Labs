@@ -15,10 +15,12 @@ namespace Laba7
     public partial class FAddCrewMember : Form
     {
         Airplane nplane;
+        FAddAirplane f;
         private object[] posts = { "First pilot", "Second pilot", "Hostess" };
-        public FAddCrewMember(Airplane plane)
+        public FAddCrewMember(Airplane plane, FAddAirplane form)
         {
             nplane = plane;
+            f = form;
             InitializeComponent();
             #region
             AddingCrewTable.RowCount = plane.crewNumb;
@@ -78,6 +80,8 @@ namespace Laba7
                 formatter.Serialize(fs, nplane);
             }
             this.Close();
+            f.Close();
+            
 
         }
     }

@@ -216,6 +216,7 @@
             this.TBCarrying.Name = "TBCarrying";
             this.TBCarrying.Size = new System.Drawing.Size(164, 20);
             this.TBCarrying.TabIndex = 15;
+           // this.TBCarrying.TextChanged += new System.EventHandler(this.TBCarrying_TextChanged);
             // 
             // LBLLastService
             // 

@@ -45,14 +45,8 @@ namespace Laba7
             addPlane.Show();
         }
 
-        private void listPlanes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void BRefresh_Click(object sender, EventArgs e)
         {
-
             airplanes.Clear();
             Airport.LoadAirport(this);
             foreach (var plane in airplanes)
