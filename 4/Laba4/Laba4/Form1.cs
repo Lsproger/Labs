@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Laba4
 {
+    
     public partial class Form1 : Form
     {
+        
         List<CollectionType<Box>> listOfColl = new List<CollectionType<Box>>();
         List<CollectionType<Box>> Sorted_list;
         Random R = new Random();
@@ -141,6 +143,26 @@ namespace Laba4
             string[] stri = { "Lolkek" };
 
             textBox1.Lines = stri;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            listOfColl.Sort(new Comparison<CollectionType<Box>>(Comparator));
+            print(listOfColl);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            listOfColl.Sort(new Comparison<CollectionType<Box>>(Comparator));
+            listOfColl.Reverse();
+            print(listOfColl);
+        }
+
+        private int Comparator(CollectionType<Box> A, CollectionType<Box> B)
+        {
+            if (A.Count < B.Count) return -1;
+            else if (A.Count > B.Count) return 1;
+            else return 0;
         }
     }
 }

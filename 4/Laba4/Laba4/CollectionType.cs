@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Laba4
 {
-    class CollectionType<T> : IList<T>
+    public class CollectionType<T> : IList<T>
     {
        // public delegate string Str(CollectionType<T> t);
         private T[] _contents = new T[8];

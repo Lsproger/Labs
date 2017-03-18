@@ -9,3 +9,8 @@ D:\Учёба\ООП\2 семестр\Лабы\4\Laba4\Laba4\obj\Debug\Laba4.csp
 D:\Учёба\ООП\2 семестр\Labs\4\Laba4\Laba4\bin\Debug\Laba4.exe.config
 D:\Учёба\ООП\2 семестр\Labs\4\Laba4\Laba4\obj\Debug\Laba4.exe
 D:\Учёба\ООП\2 семестр\Labs\4\Laba4\Laba4\obj\Debug\Laba4.pdb
+D:\Учёба\ООП\2 семестр\Labs\4\Laba4\Laba4\bin\Debug\Laba4.exe
+D:\Учёба\ООП\2 семестр\Labs\4\Laba4\Laba4\bin\Debug\Laba4.pdb
+D:\Учёба\ООП\2 семестр\Labs\4\Laba4\Laba4\obj\Debug\Laba4.csprojResolveAssemblyReference.cache
+D:\Учёба\ООП\2 семестр\Labs\4\Laba4\Laba4\obj\Debug\Laba4.Form1.resources
+D:\Учёба\ООП\2 семестр\Labs\4\Laba4\Laba4\obj\Debug\Laba4.csproj.GenerateResource.Cache

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace Laba4
 {
+    //public delegate int Comparator(CollectionType<Box> A, CollectionType<Box> B);
     class Program
     {
        // [STAThread]
