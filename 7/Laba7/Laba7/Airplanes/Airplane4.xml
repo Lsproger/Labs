@@ -1,37 +1,21 @@
 <?xml version="1.0"?>
 <Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <crewNumb>3</crewNumb>
+  <crewNumb>1</crewNumb>
   <crewMember>
     <CrewMember>
-      <Firstname>Alex</Firstname>
-      <Surname>First</Surname>
-      <Patronymic>Pilot</Patronymic>
-      <Post>First pilot</Post>
-      <Age>25</Age>
-      <Experience>5</Experience>
-    </CrewMember>
-    <CrewMember>
-      <Firstname>Anton</Firstname>
-      <Surname>Second </Surname>
-      <Patronymic>Pilot</Patronymic>
-      <Post>Second pilot</Post>
-      <Age>23</Age>
-      <Experience>2</Experience>
-    </CrewMember>
-    <CrewMember>
-      <Firstname>Vasilisa</Firstname>
-      <Surname>The </Surname>
-      <Patronymic>Hostess</Patronymic>
+      <Firstname>ор</Firstname>
+      <Surname>голос</Surname>
+      <Patronymic>вапр</Patronymic>
       <Post>Hostess</Post>
-      <Age>19</Age>
-      <Experience>1</Experience>
+      <Age>12</Age>
+      <Experience>5</Experience>
     </CrewMember>
   </crewMember>
   <Id>4</Id>
-  <Type>Transporter</Type>
-  <Model>Boeing747</Model>
-  <Places>100</Places>
-  <IssueYear>2014</IssueYear>
-  <Carrying>15000</Carrying>
-  <LastService>1 марта 2017 г.</LastService>
+  <Type>Military</Type>
+  <Model>ил-12</Model>
+  <Places>70</Places>
+  <IssueYear>1960</IssueYear>
+  <Carrying>2000</Carrying>
+  <LastService>23 марта 2017 г.</LastService>
 </Airplane>

@@ -4,6 +4,7 @@ namespace Calculator
 {
     class Calculator
     {
+        private bool yesno = true;
         private double result, result1, result2;
         private char[] dd1 = new char[10];
         private char[] dd2 = new char[10];

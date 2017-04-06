@@ -1,21 +1,29 @@
 <?xml version="1.0"?>
 <Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <crewNumb>1</crewNumb>
+  <crewNumb>2</crewNumb>
   <crewMember>
     <CrewMember>
-      <Firstname>Yury</Firstname>
-      <Surname>The</Surname>
-      <Patronymic>Pilot</Patronymic>
+      <Firstname>Perviy</Firstname>
+      <Surname>Pilot</Surname>
+      <Patronymic>Samoleta</Patronymic>
       <Post>First pilot</Post>
-      <Age>22</Age>
-      <Experience>15</Experience>
+      <Age>25</Age>
+      <Experience>5</Experience>
+    </CrewMember>
+    <CrewMember>
+      <Firstname>Vtoroy</Firstname>
+      <Surname>Pilot</Surname>
+      <Patronymic />
+      <Post>Second pilot</Post>
+      <Age>23</Age>
+      <Experience>5</Experience>
     </CrewMember>
   </crewMember>
   <Id>2</Id>
-  <Type>Military</Type>
-  <Model>MilitaryPlane</Model>
-  <Places>0</Places>
-  <IssueYear>2015</IssueYear>
-  <Carrying>1500</Carrying>
-  <LastService>10 августа 2016 г.</LastService>
+  <Type>Transporter</Type>
+  <Model>Boevoi samolet</Model>
+  <Places>60</Places>
+  <IssueYear>1985</IssueYear>
+  <Carrying>15000</Carrying>
+  <LastService>1 марта 2017 г.</LastService>
 </Airplane>

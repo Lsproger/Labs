@@ -56,10 +56,18 @@ namespace Laba7
 
             for (int i = 0; i < nplane.crewNumb; i++)
             {
-                
+                Control c3 = null;
                 Control c1 = AddingCrewTable.GetChildAtPoint(new Point(5, n));
                 Control c2 = GetNextControl(c1, true);
-                Control c3 = GetNextControl(c2, true);
+                if (GetNextControl(c2, true) != null)
+                {
+                    c3 = GetNextControl(c2, true);
+                }
+                else
+                {
+                    c3 = new Control();
+                    c3.Text = "";
+                }
                 Control c4 = GetNextControl(c3, true);
                 Control c5 = GetNextControl(c4, true);
                 Control c6 = GetNextControl(c5, true);
@@ -74,7 +82,7 @@ namespace Laba7
 
             XmlSerializer formatter = new XmlSerializer(typeof(Airplane));
             // получаем поток, куда будем записывать сериализованный объект
-            string fname = @"D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\Airplanes\Airplane" + nplane.Id + ".xml";
+            string fname = @"D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\Airplanes\Airplane" + (nplane.Id) + ".xml";
             using (FileStream fs = new FileStream(fname, FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, nplane);

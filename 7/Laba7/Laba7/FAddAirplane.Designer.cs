@@ -160,7 +160,6 @@
             this.CBNumberOfPlaces.Name = "CBNumberOfPlaces";
             this.CBNumberOfPlaces.Size = new System.Drawing.Size(164, 21);
             this.CBNumberOfPlaces.TabIndex = 10;
-            this.CBNumberOfPlaces.SelectedIndexChanged += new System.EventHandler(this.CBNumberOfPlaces_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -177,7 +176,7 @@
             // 
             this.TBYearOfIssue.BackColor = System.Drawing.Color.LightPink;
             this.TBYearOfIssue.Location = new System.Drawing.Point(109, 156);
-            this.TBYearOfIssue.Maximum = 2020;
+            this.TBYearOfIssue.Maximum = 2017;
             this.TBYearOfIssue.Minimum = 1950;
             this.TBYearOfIssue.Name = "TBYearOfIssue";
             this.TBYearOfIssue.Size = new System.Drawing.Size(121, 45);
@@ -195,7 +194,6 @@
             this.LYIssue.TabIndex = 13;
             this.LYIssue.Text = "1950";
             this.LYIssue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LYIssue.Click += new System.EventHandler(this.label2_Click);
             // 
             // LBLCarrying
             // 

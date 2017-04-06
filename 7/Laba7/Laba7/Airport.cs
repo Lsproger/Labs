@@ -36,5 +36,18 @@ namespace Laba7
                 }
             }
         }
+        internal static Airplane GetAirplane(int id)
+        {
+            string[] planes;
+            Airplane newAirplane;
+            planes = Directory.GetFiles(@"D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\Airplanes");
+            XmlSerializer formatter = new XmlSerializer(typeof(Airplane));
+            
+            using (FileStream fs = new FileStream(planes[id], FileMode.OpenOrCreate))
+            { 
+                newAirplane = (Airplane)formatter.Deserialize(fs);
+            }
+            return newAirplane;
+        }
     }
 }

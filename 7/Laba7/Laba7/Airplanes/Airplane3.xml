@@ -3,19 +3,19 @@
   <crewNumb>1</crewNumb>
   <crewMember>
     <CrewMember>
-      <Firstname>Snova</Firstname>
-      <Surname>One</Surname>
-      <Patronymic>Pilot</Patronymic>
+      <Firstname>Ya</Firstname>
+      <Surname>Pilot</Surname>
+      <Patronymic />
       <Post>First pilot</Post>
-      <Age>59</Age>
-      <Experience>22</Experience>
+      <Age>54</Age>
+      <Experience>15</Experience>
     </CrewMember>
   </crewMember>
   <Id>3</Id>
   <Type>Passenger</Type>
-  <Model>Plane</Model>
-  <Places>55</Places>
-  <IssueYear>2016</IssueYear>
-  <Carrying>1</Carrying>
-  <LastService>3 марта 2017 г.</LastService>
+  <Model>Airbus</Model>
+  <Places>53</Places>
+  <IssueYear>1950</IssueYear>
+  <Carrying>156</Carrying>
+  <LastService>24 марта 2017 г.</LastService>
 </Airplane>

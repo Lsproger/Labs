@@ -74,7 +74,7 @@ namespace Laba7
         public override string ToString()
         {
             string s;
-            s = ("ID:"+Id+"; Type:" + Type + "; Model:" + Model + "; Places:" + Places); 
+            s = ("ID:"+Id+"; Type:" + Type + "; Model:" + Model + "; Places:" + Places + "; Carrying:" + Carrying); 
             return s;
         }
         // public Procreator procreator;
