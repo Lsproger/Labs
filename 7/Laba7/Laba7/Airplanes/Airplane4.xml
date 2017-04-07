@@ -1,21 +1,29 @@
 <?xml version="1.0"?>
 <Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <crewNumb>1</crewNumb>
+  <crewNumb>2</crewNumb>
   <crewMember>
     <CrewMember>
-      <Firstname>ор</Firstname>
-      <Surname>голос</Surname>
-      <Patronymic>вапр</Patronymic>
-      <Post>Hostess</Post>
-      <Age>12</Age>
-      <Experience>5</Experience>
+      <Firstname>Papa</Firstname>
+      <Surname>Tvoi</Surname>
+      <Patronymic>Viktorovich</Patronymic>
+      <Post>First pilot</Post>
+      <Age>45</Age>
+      <Experience>15</Experience>
+    </CrewMember>
+    <CrewMember>
+      <Firstname>Dyadya</Firstname>
+      <Surname>Moi</Surname>
+      <Patronymic>Olgovich</Patronymic>
+      <Post>Second pilot</Post>
+      <Age>34</Age>
+      <Experience>8</Experience>
     </CrewMember>
   </crewMember>
   <Id>4</Id>
-  <Type>Military</Type>
-  <Model>ил-12</Model>
-  <Places>70</Places>
-  <IssueYear>1960</IssueYear>
-  <Carrying>2000</Carrying>
-  <LastService>23 марта 2017 г.</LastService>
+  <Type>Passenger</Type>
+  <Model>Boeing228</Model>
+  <Places>100</Places>
+  <IssueYear>2000</IssueYear>
+  <Carrying>10000</Carrying>
+  <LastService>16 ноября 2016 г.</LastService>
 </Airplane>

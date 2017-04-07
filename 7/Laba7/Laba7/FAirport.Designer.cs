@@ -49,8 +49,14 @@
             this.About = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.авиакомпанииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.типуСамолётаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.количествуМестToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.несколькоКритериевToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.фИОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.датаПоследнегоТОToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -58,6 +64,9 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.командираToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пилотаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.грузоподъёмностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -238,11 +247,41 @@
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.авиакомпанииToolStripMenuItem,
+            this.типуСамолётаToolStripMenuItem,
+            this.количествуМестToolStripMenuItem,
+            this.грузоподъёмностиToolStripMenuItem,
+            this.несколькоКритериевToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(102, 19);
             this.toolStripDropDownButton1.Text = "Поиск по";
+            // 
+            // авиакомпанииToolStripMenuItem
+            // 
+            this.авиакомпанииToolStripMenuItem.Name = "авиакомпанииToolStripMenuItem";
+            this.авиакомпанииToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.авиакомпанииToolStripMenuItem.Text = "Авиакомпании";
+            // 
+            // типуСамолётаToolStripMenuItem
+            // 
+            this.типуСамолётаToolStripMenuItem.Name = "типуСамолётаToolStripMenuItem";
+            this.типуСамолётаToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.типуСамолётаToolStripMenuItem.Text = "Типу самолёта";
+            // 
+            // количествуМестToolStripMenuItem
+            // 
+            this.количествуМестToolStripMenuItem.Name = "количествуМестToolStripMenuItem";
+            this.количествуМестToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.количествуМестToolStripMenuItem.Text = "Количеству мест";
+            // 
+            // несколькоКритериевToolStripMenuItem
+            // 
+            this.несколькоКритериевToolStripMenuItem.Name = "несколькоКритериевToolStripMenuItem";
+            this.несколькоКритериевToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.несколькоКритериевToolStripMenuItem.Text = "Несколько критериев";
             // 
             // toolStripSeparator2
             // 
@@ -252,11 +291,29 @@
             // toolStripDropDownButton2
             // 
             this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.фИОToolStripMenuItem,
+            this.датаПоследнегоТОToolStripMenuItem});
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.Size = new System.Drawing.Size(102, 19);
             this.toolStripDropDownButton2.Text = "Сортировка по";
+            // 
+            // фИОToolStripMenuItem
+            // 
+            this.фИОToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.командираToolStripMenuItem,
+            this.пилотаToolStripMenuItem});
+            this.фИОToolStripMenuItem.Name = "фИОToolStripMenuItem";
+            this.фИОToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.фИОToolStripMenuItem.Text = "ФИО";
+            // 
+            // датаПоследнегоТОToolStripMenuItem
+            // 
+            this.датаПоследнегоТОToolStripMenuItem.Name = "датаПоследнегоТОToolStripMenuItem";
+            this.датаПоследнегоТОToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.датаПоследнегоТОToolStripMenuItem.Text = "Дата последнего ТО";
             // 
             // toolStripSeparator1
             // 
@@ -323,6 +380,24 @@
             // 
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
             // 
+            // командираToolStripMenuItem
+            // 
+            this.командираToolStripMenuItem.Name = "командираToolStripMenuItem";
+            this.командираToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.командираToolStripMenuItem.Text = "Командира";
+            // 
+            // пилотаToolStripMenuItem
+            // 
+            this.пилотаToolStripMenuItem.Name = "пилотаToolStripMenuItem";
+            this.пилотаToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.пилотаToolStripMenuItem.Text = "Пилота";
+            // 
+            // грузоподъёмностиToolStripMenuItem
+            // 
+            this.грузоподъёмностиToolStripMenuItem.Name = "грузоподъёмностиToolStripMenuItem";
+            this.грузоподъёмностиToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.грузоподъёмностиToolStripMenuItem.Text = "Грузоподъёмности";
+            // 
             // FAirport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,6 +455,15 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        private System.Windows.Forms.ToolStripMenuItem авиакомпанииToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem типуСамолётаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem количествуМестToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem несколькоКритериевToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem фИОToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem датаПоследнегоТОToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem командираToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem пилотаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem грузоподъёмностиToolStripMenuItem;
     }
 }
 

@@ -17,6 +17,7 @@ namespace Laba7
     public partial class FAirport : Form
     {
 
+        #region Необходимые элементы(Да-да)
         internal List<Airplane> airplanes = new List<Airplane>();
         internal List<Airplane> results = new List<Airplane>();
         Button bt = new Button();
@@ -26,31 +27,85 @@ namespace Laba7
         TextBox tb1 = new TextBox();
         TextBox tb2 = new TextBox();
         ListBox resultPlanes = new ListBox();
-
+        TextBox sortResults = new TextBox();
+        #endregion
 
         public FAirport()
         {
             InitializeComponent();
-            //toolStripProgressBar1.
-
             #region Menu
             ///События выбора одного из пунктов меню
             listPlanes.SelectedIndexChanged += ListPlanes_SelectedIndexChanged;
+
             Search_Company.Click += Search_Company_Click;
             Search_Type.Click += Search_Type_Click1;
             Search_NumbOfPlaces.Click += Search_NumbOfPlaces_Click;
             Search_Carrying.Click += Search_Carrying_Click;
             Search_ComboSearch.Click += Search_ComboSearch_Click;
+
             Sort_FirstPilot.Click += Sort_FirstPilot_Click;
             Sort_SecPilot.Click += Sort_SecPilot_Click;
             Sort_LastTO.Click += Sort_LastTO_Click;
+
             Menu_Save.Click += Menu_Save_Click;
             About.Click += About_Click;
+
+            авиакомпанииToolStripMenuItem.Click += Search_Company_Click;
+            типуСамолётаToolStripMenuItem.Click += Search_Type_Click1;
+            количествуМестToolStripMenuItem.Click+= Search_NumbOfPlaces_Click;
+            грузоподъёмностиToolStripMenuItem.Click += Search_Carrying_Click;
+            несколькоКритериевToolStripMenuItem.Click += Search_ComboSearch_Click;
+
+            командираToolStripMenuItem.Click += Sort_FirstPilot_Click;
+            пилотаToolStripMenuItem.Click += Sort_SecPilot_Click;
+            датаПоследнегоТОToolStripMenuItem.Click += Sort_LastTO_Click;
+
+            toolStripButton1.Click += Menu_Save_Click;
+            toolStripButton2.Click += About_Click;
+
             toolStripContainer1.RightToolStripPanel.ControlAdded += RightLeftAdded;
             toolStripContainer1.LeftToolStripPanel.ControlAdded += RightLeftAdded;
             toolStripContainer1.TopToolStripPanel.ControlAdded += TopBotAdded;
             toolStripContainer1.BottomToolStripPanel.ControlAdded += TopBotAdded;
             #endregion
+        }
+        private void ListPlanes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = (listPlanes.SelectedItem as Airplane).Id;
+                MessageBox.Show(Airport.GetAirplane(id - 1).ToString() + "\nЕееее, самолёт");
+            }
+            catch (NullReferenceException) { }
+        }
+        private void Airport_Load(object sender, EventArgs e)
+        {
+            Airport.LoadAirport(this);
+            foreach (Airplane plane in airplanes)   //Загрузка списка самолётов
+            {
+                listPlanes.Items.Add(plane);
+                Airport.number = plane.Id;
+            }
+        }
+        private void BAddAIrplane_Click(object sender, EventArgs e)//Добавление самолёта
+        {
+            FAddAirplane addPlane = new FAddAirplane();     //Создание формы для добавления самолёта
+            addPlane.Show();
+        }
+        private void BRefresh_Click(object sender, EventArgs e)     //Обновление списка самлётов
+        {
+            airplanes.Clear();
+            listPlanes.Items.Clear();
+            Airport.LoadAirport(this);
+            foreach (var plane in airplanes)
+            {
+                listPlanes.Items.Add(plane);
+            }
+            Airport.number = airplanes.Count;
+        }
+        private void BTShowList_Click(object sender, EventArgs e)
+        {
+            listPlanes.Visible = true;
         }
 
         /// <summary>
@@ -71,34 +126,56 @@ namespace Laba7
 
         private void About_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Это первая и единственная версия данного продукта.\n   Разработчики:\n   Михновец Юрий");
         }
-
         private void Menu_Save_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (sortResults.Text.Length > 1)
+            {
+                File.WriteAllText("\\result.txt", sortResults.Text);
+                MessageBox.Show("Файл сохранён на диске D под названием results.txt");
+            }                
+            else MessageBox.Show("Хмммм, по какой-то причине файл не ссохранён, соре");
         }
 
+        #region Сортировки и поиски по раззным преколам
         private void Sort_LastTO_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            DoSmth();
+            results = airplanes;
+            results.Sort(new Comparison<Airplane>(LTOComparator));
+            sortResults.Clear();
+            foreach (Airplane plane in results)
+            {
+                sortResults.Text += plane.ToString();
+            }
         }
-
         private void Sort_SecPilot_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            DoSmth();
+            results = airplanes;
+            results.Sort(new Comparison<Airplane>(PilotComparator));
+            sortResults.Clear();
+            foreach (Airplane plane in results)
+            {
+                sortResults.Text += plane.ToString();
+            }
         }
-
         private void Sort_FirstPilot_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            DoSmth();
+            results = airplanes;
+            results.Sort(new Comparison<Airplane>(CaptainComparator));
+            sortResults.Clear();
+            foreach (Airplane plane in results)
+            {
+                sortResults.Text += plane.ToString();
+            }
         }
-
         private void Search_ComboSearch_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
-
         private void Search_NumbOfPlaces_Click(object sender, EventArgs e)
         {
             Elements();
@@ -111,7 +188,6 @@ namespace Laba7
             tb2.Enabled = true;
             bt.Click += Result_NPlaces_Click;
         }
-
         private void Search_Type_Click1(object sender, EventArgs e)
         {
             Elements();
@@ -119,7 +195,6 @@ namespace Laba7
             l2.Text = "Тип самолёта";
             bt.Click += Result_Type_Click;
         }
-
         private void Search_Company_Click(object sender, EventArgs e)
         {
             Elements();
@@ -127,7 +202,6 @@ namespace Laba7
             l2.Text = "Название компании";
             bt.Click += Result_Company_Click;
         }
-
         private void Search_Carrying_Click(object sender, EventArgs e)
         {
             Elements();
@@ -140,7 +214,11 @@ namespace Laba7
             tb2.Enabled = true;
             bt.Click += Result_Carrying_Click;
         }
+        #endregion
 
+        /// <summary>
+        /// Вывод результатов поиска по грузоподъёмности
+        /// </summary>
         private void Result_Carrying_Click(object sender, EventArgs e)
         {
             resultPlanes.Items.Clear();
@@ -175,6 +253,9 @@ namespace Laba7
             ShowLP();
         }
 
+        /// <summary>
+        /// Вывод результатов поиска по количеству мест
+        /// </summary>
         private void Result_NPlaces_Click(object sender, EventArgs e)
         {
             resultPlanes.Items.Clear();
@@ -207,9 +288,12 @@ namespace Laba7
             }
             else if (tb1.Text == "" && tb2.Text == "") MessageBox.Show("Введите критерии поиска");
 
-            
+
         }
 
+        /// <summary>
+        /// Вывод результатов поиска по типу самолёта
+        /// </summary>
         private void Result_Type_Click(object sender, EventArgs e)
         {
             resultPlanes.Items.Clear();
@@ -221,6 +305,9 @@ namespace Laba7
             ShowLP();
         }
 
+        /// <summary>
+        /// Вывод результатов поиска по компании
+        /// </summary>
         private void Result_Company_Click(object sender, EventArgs e)
         {
             resultPlanes.Items.Clear();
@@ -228,7 +315,7 @@ namespace Laba7
         }
 
         ///<summary>
-        ///
+        ///Список результатов поиска/сортировки
         ///</summary>>
         private void ShowLP()
         {
@@ -291,57 +378,84 @@ namespace Laba7
             toolStripContainer1.ContentPanel.Controls.Add(bt);
         }
 
-        private void ListPlanes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                int id = (listPlanes.SelectedItem as Airplane).Id;
-                MessageBox.Show(Airport.GetAirplane(id - 1).ToString() + "\nЕееее, самолёт");
-            }
-            catch (NullReferenceException) { }
-
-
-
-        }
-
-        private void Airport_Load(object sender, EventArgs e)
-        {
-            Airport.LoadAirport(this);
-            foreach (Airplane plane in airplanes)
-            {
-                listPlanes.Items.Add(plane);
-                Airport.number = plane.Id;
-            }
-
-            //Airport.number = airplanes.Count;
-        }
-
-        private void BAddAIrplane_Click(object sender, EventArgs e)
-        {
-            FAddAirplane addPlane = new FAddAirplane();
-            addPlane.Show();
-        }
-
-        private void BRefresh_Click(object sender, EventArgs e)
-        {
-            airplanes.Clear();
-            listPlanes.Items.Clear();
-            Airport.LoadAirport(this);
-            foreach (var plane in airplanes)
-            {
-                listPlanes.Items.Add(plane);
-            }
-            Airport.number = airplanes.Count;
-        }
-
-        private void BTShowList_Click(object sender, EventArgs e)
-        {
-            listPlanes.Visible = true;
-        }
 
         private void Search_Type_Click(object sender, EventArgs e)
         {
 
         }
+
+        #region Компараторы для сортировки списка самолётов по разным полям
+        private int CaptainComparator(Airplane A, Airplane B)
+        {
+
+            if (A.GetCap().Firstname[0] != B.GetCap().Firstname[0])
+            {
+                if (Convert.ToSByte(A.GetCap().Firstname[0]) < Convert.ToSByte(B.GetCap().Firstname[0]))
+                    return -1;
+                else
+                    return 1;
+
+            }
+            else if (A.GetCap().Firstname[0] == B.GetCap().Firstname[0] && A.GetCap().Firstname[1] != B.GetCap().Firstname[1])
+            {
+                if (Convert.ToSByte(A.GetCap().Firstname[1]) < Convert.ToSByte(B.GetCap().Firstname[1]))
+                    return -1;
+                else
+                    return 1;
+            }
+            else return 0;
+        }
+        private int PilotComparator(Airplane A, Airplane B)
+        {
+
+            if (A.GetPil().Firstname[0] != B.GetPil().Firstname[0])
+            {
+                if (Convert.ToSByte(A.GetPil().Firstname[0]) < Convert.ToSByte(B.GetPil().Firstname[0]))
+                    return -1;
+                else
+                    return 1;
+
+            }
+            else if (A.GetPil().Firstname[0] == B.GetPil().Firstname[0] && A.GetPil().Firstname[1] != B.GetPil().Firstname[1])
+            {
+                if (Convert.ToSByte(A.GetPil().Firstname[1]) < Convert.ToSByte(B.GetPil().Firstname[1]))
+                    return -1;
+                else
+                    return 1;
+            }
+            else return 0;
+        }
+        private int LTOComparator(Airplane A, Airplane B)
+        {
+
+            if (Convert.ToDateTime(A.LastService) < Convert.ToDateTime(B.LastService))
+                return 1;
+
+            else if (Convert.ToDateTime(A.LastService) > Convert.ToDateTime(B.LastService))
+                return -1;
+            else return 0;
+        }
+        #endregion
+
+        private void DoSmth()
+        {
+            #region Очистка поля элементов и добавление TextBox для вывода результата
+            toolStripContainer1.ContentPanel.Controls.Remove(l1);
+            toolStripContainer1.ContentPanel.Controls.Remove(l2);
+            toolStripContainer1.ContentPanel.Controls.Remove(tb1);
+            toolStripContainer1.ContentPanel.Controls.Remove(bt);
+            toolStripContainer1.ContentPanel.Controls.Remove(l3);
+            toolStripContainer1.ContentPanel.Controls.Remove(tb2);
+            toolStripContainer1.ContentPanel.Controls.Remove(sortResults);
+
+            toolStripContainer1.ContentPanel.Controls.Add(sortResults);
+            sortResults.Location = new Point(12, 70);
+            sortResults.Multiline = true;
+            sortResults.Width = 380;
+            sortResults.Height = 340;
+            sortResults.ScrollBars = ScrollBars.Vertical;
+            #endregion
+        }
+
     }
 }
