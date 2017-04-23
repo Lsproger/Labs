@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <crewMember>
+    <CrewMember>
+      <Firstname>Usama</Firstname>
+      <Surname>Ben</Surname>
+      <Patronymic>Laden</Patronymic>
+      <Post>Second pilot</Post>
+      <Age>45</Age>
+      <Experience>5</Experience>
+    </CrewMember>
+    <CrewMember>
+      <Firstname>Ne</Firstname>
+      <Surname>Terrorist</Surname>
+      <Patronymic />
+      <Post>First pilot</Post>
+      <Age>37</Age>
+      <Experience>3</Experience>
+    </CrewMember>
+  </crewMember>
+  <crewNumb>2</crewNumb>
+  <Id>6</Id>
+  <Type>Transporter</Type>
+  <Model>Eeee samolet</Model>
+  <Places>63</Places>
+  <IssueYear>1950</IssueYear>
+  <Carrying>1234</Carrying>
+  <LastService>3 апреля 2017 г.</LastService>
+</Airplane>

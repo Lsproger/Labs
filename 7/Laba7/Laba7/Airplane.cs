@@ -3,17 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Laba7
 {
     public class Airplane
     {
         /// <summary>
-        /// Класс, описывающий сммолёт
+        /// Класс, описывающий самолёт
         /// </summary>
         public Airplane() { }
 
-        public int crewNumb;//Количество членов экипажа
+        private int crewNumber;
+        [Required]
+        [Range(2, 10)]
+        public int crewNumb
+        {
+            get { return crewNumber; }
+            set { crewNumber = value; }
+        }//Количество членов экипажа
+
         private int id;
         public int Id//ID самолёта
         {
@@ -27,7 +37,9 @@ namespace Laba7
             }
         }
 
+
         private string type;
+        [Required]
         public string Type//Тип самолёта
         {
             get { return type; }
@@ -35,6 +47,9 @@ namespace Laba7
         }
 
         private string model;
+        [Required]
+        [StringLength(maximumLength:20, MinimumLength =2)]
+        [RegularExpression(@"^[A-Z][a-zA-Z0-9-]{0,30}$")]
         public string Model//Модель самолёта
         {
             get { return model; }
@@ -48,6 +63,7 @@ namespace Laba7
         }
 
         private int places;
+        [Required]
         public int Places//Количество мест в самолёте
         {
             get { return places; }
@@ -55,6 +71,8 @@ namespace Laba7
         }
 
         private int issueYear;
+        [Required]
+        [Range(1900,2017)]
         public int IssueYear//Год производства
         {
             get { return issueYear; }
@@ -62,6 +80,8 @@ namespace Laba7
         }
 
         private int carrying;
+        [Required]
+        [Range(500,999999)]
         public int Carrying//Грузоподъёмность
         {
             get { return carrying; }
@@ -69,6 +89,7 @@ namespace Laba7
         }
 
         private string lastService;
+        [Required]
         public string LastService//Дата последнего ТО
         {
             get { return lastService; }

@@ -9,3 +9,4 @@ D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Debug\Laba7.csproj.
 D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Debug\Laba7.exe
 D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Debug\Laba7.pdb
 D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Debug\Laba7.csprojResolveAssemblyReference.cache
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Debug\Laba7.FComboSearch.resources

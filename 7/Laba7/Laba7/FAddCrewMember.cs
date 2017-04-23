@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml.Serialization;
+using System.ComponentModel.DataAnnotations;
 
 namespace Laba7
 {
@@ -53,44 +54,62 @@ namespace Laba7
         private void BSaveCrew_Click(object sender, EventArgs e)
         {
             int n = 30;
-
-            for (int i = 0; i < nplane.crewNumb; i++)
-            {
-                Control c3 = null;
-                Control c1 = AddingCrewTable.GetChildAtPoint(new Point(5, n));
-                Control c2 = GetNextControl(c1, true);
-                if (GetNextControl(c2, true) != null)
+            try { 
+                for (int i = 0; i < nplane.crewNumb; i++)
                 {
-                    c3 = GetNextControl(c2, true);
+                    Control c3 = null;
+                    Control c1 = AddingCrewTable.GetChildAtPoint(new Point(5, n));
+                    Control c2 = GetNextControl(c1, true);
+                    if (GetNextControl(c2, true) != null)
+                    {
+                        c3 = GetNextControl(c2, true);
+                    }
+                    else
+                    {
+                        c3 = new Control();
+                        c3.Text = "";
+                    }
+                    Control c4 = GetNextControl(c3, true);
+                    Control c5 = GetNextControl(c4, true);
+                    Control c6 = GetNextControl(c5, true);
+                    CrewMember cm = new CrewMember(
+                                                c1.Text, c2.Text, c3.Text, c5.Text,
+                                                Convert.ToInt32(c4.Text), Convert.ToInt32(c6.Text));
+                    try
+                    {
+                        var results = new List<ValidationResult>();
+                        var context = new ValidationContext(cm);
+                        if (!Validator.TryValidateObject(cm, context, results, true))
+                        {
+                            foreach (var err in results)
+                            {
+                                throw new ValidationException(err.ErrorMessage);
+                            }
+                        }
+                        nplane.crewMember.Add(cm);
+                        n += 24;
+                    }
+                    catch (ValidationException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        throw new ValidationException(ex.Message);
+                    }
                 }
-                else
+
+                XmlSerializer formatter = new XmlSerializer(typeof(Airplane));
+                // получаем поток, куда будем записывать сериализованный объект
+                string fname = @"D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\Airplanes\Airplane" + (nplane.Id) + ".xml";
+                using (FileStream fs = new FileStream(fname, FileMode.OpenOrCreate))
                 {
-                    c3 = new Control();
-                    c3.Text = "";
+                    formatter.Serialize(fs, nplane);
                 }
-                Control c4 = GetNextControl(c3, true);
-                Control c5 = GetNextControl(c4, true);
-                Control c6 = GetNextControl(c5, true);
-                nplane.crewMember.Add( new CrewMember
-                        (
-                            c1.Text, c2.Text, c3.Text, c5.Text,
-                            Convert.ToInt32(c4.Text), Convert.ToInt32(c6.Text)
-                        )
-                    );
-                n += 24;
+                this.Close();
+                f.Close();
             }
-
-            XmlSerializer formatter = new XmlSerializer(typeof(Airplane));
-            // получаем поток, куда будем записывать сериализованный объект
-            string fname = @"D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\Airplanes\Airplane" + (nplane.Id) + ".xml";
-            using (FileStream fs = new FileStream(fname, FileMode.OpenOrCreate))
+            catch(ValidationException ex)
             {
-                formatter.Serialize(fs, nplane);
+                MessageBox.Show("Isprav' oshibki");
             }
-            this.Close();
-            f.Close();
-            
-
         }
     }
 }

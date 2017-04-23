@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <crewNumb>3</crewNumb>
+  <crewMember>
+    <CrewMember>
+      <Firstname>Yury</Firstname>
+      <Surname>Mikhnovets</Surname>
+      <Patronymic>Pavlovich</Patronymic>
+      <Post>First pilot</Post>
+      <Age>34</Age>
+      <Experience>16</Experience>
+    </CrewMember>
+    <CrewMember>
+      <Firstname>Anton</Firstname>
+      <Surname>Reyn</Surname>
+      <Patronymic>Edwardovich</Patronymic>
+      <Post>Second pilot</Post>
+      <Age>33</Age>
+      <Experience>11</Experience>
+    </CrewMember>
+    <CrewMember>
+      <Firstname>Ann</Firstname>
+      <Surname>Kekaway</Surname>
+      <Patronymic>Antonovna</Patronymic>
+      <Post>Hostess</Post>
+      <Age>24</Age>
+      <Experience>5</Experience>
+    </CrewMember>
+  </crewMember>
+  <Id>5</Id>
+  <Type>Passenger</Type>
+  <Model>Airbus</Model>
+  <Places>191</Places>
+  <IssueYear>2015</IssueYear>
+  <Carrying>20000</Carrying>
+  <LastService>1 декабря 2016 г.</LastService>
+</Airplane>
