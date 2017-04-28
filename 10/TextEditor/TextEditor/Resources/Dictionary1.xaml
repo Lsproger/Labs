@@ -1,0 +1,71 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TextEditor.Resources"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib"
+                    xmlns:Custom="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon">
+
+    <ImageBrush x:Key="ImBrush" ImageSource="D:\Учёба\ООП\2 семестр\Labs\10\TextEditor\TextEditor\Resources\lel.png"></ImageBrush>
+    <Style x:Key="Triggers" TargetType="Custom:RibbonButton">
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsEnabled" Value="true" />
+                    <Condition Property="Content" Value="kok" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Background" Value="Black"/>
+                    <Setter Property="Height" Value="16"/>
+                    <Setter Property="Width" Value="16"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="_dataTr" TargetType="TextBox">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=_numbOfChar, Path=Text}" Value="10">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="FontSize" Value="20"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="mlya" TargetType="Button">
+        <Style.Triggers>
+            <MultiTrigger>
+                <!--Список условий-->
+                <MultiTrigger.Conditions>
+                    <Condition Property="Control.IsMouseOver" Value="True"></Condition>
+                    
+                </MultiTrigger.Conditions>
+                <!--Список изменений, которые вступят в силу, если все условия выполнятся-->
+                <MultiTrigger.Setters>
+                    <Setter Property="Control.Foreground" Value="DarkBlue"></Setter>
+                    <Setter Property="Control.FontSize" Value="20"></Setter>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="_evTr" TargetType="Button">
+        <Style.Triggers>
+            <!--Действие на событие MouseEnter-->
+            <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Size"  To="30" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <!--Действие на событие MouseLeave-->
+            <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:3" Storyboard.TargetProperty="Size" To="18" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>
