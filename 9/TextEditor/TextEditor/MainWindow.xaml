@@ -108,7 +108,7 @@
                     <Custom:RibbonTextBox Name="_ScaleValue" Width="40" Label="100%"/>
                 </StackPanel>
             </Grid>
-            <RichTextBox Style="{StaticResource ForBoys}" Background="#FFFDC8F6" x:Name="richTextBox" BorderThickness="0" PreviewDragEnter="RichTextBox_DragEnter" PreviewDragOver="RichTextBox_DragOver" PreviewDrop="RichTextBox_Drop" RenderTransformOrigin="0,0" Width="517" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"/>
+            <RichTextBox Style="{StaticResource ForBoys}" Background="#FFFDC8F6" x:Name="richTextBox" BorderThickness="0" PreviewDragEnter="RichTextBox_DragEnter" PreviewDragOver="RichTextBox_DragOver" PreviewDrop="RichTextBox_Drop" RenderTransformOrigin="0,0" Width="517" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
         </DockPanel>
     </Grid>
 </Window>

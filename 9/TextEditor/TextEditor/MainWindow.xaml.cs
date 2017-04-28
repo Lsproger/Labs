@@ -66,8 +66,8 @@ namespace TextEditor
         private void _ScaleSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             _ScaleValue.Label = _ScaleSlider.Value + "%";
-            richTextBox.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
-            richTextBox.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+            richTextBox.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
+            richTextBox.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
 
             //richTextBox.RenderTransform = new ScaleTransform((1 + _ScaleSlider.Value / 100), (1 + _ScaleSlider.Value / 100), 0, 0);
             richTextBox.LayoutTransform = new ScaleTransform((_ScaleSlider.Value / 100), (_ScaleSlider.Value / 100), 0, 0);
