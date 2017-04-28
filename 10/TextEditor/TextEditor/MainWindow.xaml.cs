@@ -39,7 +39,7 @@ namespace TextEditor
             _ScaleSlider.ValueChanged += _ScaleSlider_ValueChanged;
             timer.Interval = new TimeSpan(1000000);
             timer.Start();
-            this.Loaded += Form_Loaded;
+            _Editor.Loaded += Form_Loaded;
             this.Title += numbOfWindows;
             numbOfWindows++;
             richTextBox.AddHandler(RichTextBox.DragOverEvent, new DragEventHandler(RichTextBox_DragOver), true);
@@ -66,8 +66,8 @@ namespace TextEditor
         private void _ScaleSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             _ScaleValue.Label = _ScaleSlider.Value + "%";
-            richTextBox.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
-            richTextBox.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+            richTextBox.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
+            richTextBox.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
 
             //richTextBox.RenderTransform = new ScaleTransform((1 + _ScaleSlider.Value / 100), (1 + _ScaleSlider.Value / 100), 0, 0);
             richTextBox.LayoutTransform = new ScaleTransform((_ScaleSlider.Value / 100), (_ScaleSlider.Value / 100), 0, 0);
@@ -93,6 +93,7 @@ namespace TextEditor
             _fontSize.Text = Convert.ToString(_fSizeSlider.Value);
             cb.SelectionChanged += Cb_SelectionChanged;
             _fSizeSlider.ValueChanged += _fSizeSlider_ValueChanged;
+
 
         }
 
@@ -276,6 +277,7 @@ namespace TextEditor
                     App.Language = lang;
                 }
             }
+
         }
     }
 

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/lel.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/mycursor.cur")]
 
 

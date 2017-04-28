@@ -137,8 +137,5 @@
   <ItemGroup>
     <Resource Include="Resources\MyCursor.cur" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\lel.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,16 +12,18 @@
             <Setter Property="Control.FontFamily" Value="Calibri"></Setter>
             <Setter Property="Control.FontSize" Value="14"></Setter>
             <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+            
             <Setter Property="Control.Background" Value="LightPink"/>
+
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid  Style="{StaticResource ForBoys}">
         <DockPanel>
             <StackPanel DockPanel.Dock="Top">
                 <Grid>
                     <StackPanel>
-                        <Menu x:Name="_Menu"  Margin="0,0,0,0" Style="{DynamicResource ForBoys}">
-                            <Custom:RibbonMenuItem Header="{DynamicResource mItem_File}" Padding="-15,0,0,0" MouseOverBackground="#7F38C9FF" Click="RibbonMenuItem_Click">
+                        <Menu Margin="0,0,0,0" Style="{StaticResource ForBoys}">
+                            <Custom:RibbonMenuItem Header="{DynamicResource mItem_File}" Padding="-15,0,0,0" MouseOverBackground="#7F38C9FF">
                                 <Custom:RibbonButton Command="New" Label="{DynamicResource mItemFile_New}" MouseOverBackground="#7F38C9FF" Margin="0">
                                     <Button.CommandBindings>
                                         <CommandBinding Command = "New" Executed= "new_ButonClick" />
@@ -43,8 +45,8 @@
                                 <Custom:RibbonMenuItem Header="{DynamicResource mItemEdit_Paste}" Command="Paste" CommandTarget="{Binding ElementName=richTextBox}"/>
                                 <Custom:RibbonMenuItem Header="{DynamicResource mItemEdit_Cut}" Command="Cut" CommandTarget="{Binding ElementName=richTextBox}"/>
                             </Custom:RibbonMenuItem>
-                            <Custom:RibbonButton Style="{StaticResource Triggers}" Background="{StaticResource ImBrush}" Height="32" Width="32" FocusedBackground="{StaticResource ImBrush}" MouseOverBackground="{StaticResource ImBrush}"/>
-                            <Custom:RibbonButton Style="{DynamicResource Triggers}" Name="_nam" Background="{DynamicResource ImBrush}" Height="32" Width="32" RenderTransformOrigin="0.5,0.5" FocusedBackground="{DynamicResource ImBrush}" MouseOverBackground="{DynamicResource ImBrush}">
+                            <Custom:RibbonButton Background="{StaticResource ImBrush}" Height="32" Width="32" FocusedBackground="{StaticResource ImBrush}" MouseOverBackground="{StaticResource ImBrush}"/>
+                            <Custom:RibbonButton Name="_nam" Background="{DynamicResource ImBrush}" Height="32" Width="32" RenderTransformOrigin="0.5,0.5" FocusedBackground="{DynamicResource ImBrush}" MouseOverBackground="{DynamicResource ImBrush}">
                                 <Custom:RibbonButton.RenderTransform>
                                     <TransformGroup>
                                         <ScaleTransform ScaleY="1" ScaleX="-1"/>
@@ -56,9 +58,6 @@
                             </Custom:RibbonButton>
                             <Button Style="{DynamicResource mlya}" Content="Lolkek">
                             </Button>
-
-
-
                         </Menu>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Right">
@@ -67,7 +66,7 @@
                     </StackPanel>
                 </Grid>
                 <ToolBarPanel Margin="-4,-1,-1,0">
-                    <ToolBar  Style="{DynamicResource ForBoys}">
+                    <ToolBar  Style="{StaticResource ForBoys}">
                         <Custom:RibbonButton ToolTip="New file" SmallImageSource="Resources/new.png"  Command = "New" FocusedBackground="#FF37E4FF" MouseOverBackground="#5937E4FF">
                             <Button.CommandBindings >
                                 <CommandBinding Command = "New" Executed= "new_ButonClick" />
@@ -111,8 +110,7 @@
                     </LinearGradientBrush>
                 </Grid.Background>
                 <StackPanel Orientation="Horizontal">
-                    
-                        <Label Content="{DynamicResource iPannel_NumberOfCharacters}"/>
+                    <Label Content="{DynamicResource iPannel_NumberOfCharacters}"/>
                     <TextBox Name="_numbOfChar" BorderThickness="0" VerticalContentAlignment="Center" Background="{x:Null}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
@@ -123,7 +121,7 @@
                     <Custom:RibbonTextBox Name="_ScaleValue" Width="40" Label="100%"/>
                 </StackPanel>
             </Grid>
-            <RichTextBox Style="{DynamicResource ForBoys}" Background="#FFFDC8F6" x:Name="richTextBox" BorderThickness="0" PreviewDragEnter="RichTextBox_DragEnter" PreviewDragOver="RichTextBox_DragOver" PreviewDrop="RichTextBox_Drop" RenderTransformOrigin="0,0" Width="517"/>
+            <RichTextBox Style="{StaticResource ForBoys}" Background="#FFFDC8F6" x:Name="richTextBox" BorderThickness="0" PreviewDragEnter="RichTextBox_DragEnter" PreviewDragOver="RichTextBox_DragOver" PreviewDrop="RichTextBox_Drop" RenderTransformOrigin="0,0" Width="517" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
         </DockPanel>
     </Grid>
 </Window>
