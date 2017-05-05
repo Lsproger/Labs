@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<ArrayOfAirplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Airplane>
+    <crewMember>
+      <CrewMember>
+        <Firstname>Ya </Firstname>
+        <Surname>Pillot</Surname>
+        <Patronymic />
+        <Post>First pilot</Post>
+        <Age>25</Age>
+        <Experience>5</Experience>
+      </CrewMember>
+    </crewMember>
+    <crewNumb>1</crewNumb>
+    <Id>1</Id>
+    <Type>Transporter</Type>
+    <Model>Samolet</Model>
+    <Places>51</Places>
+    <IssueYear>1990</IssueYear>
+    <Carrying>150</Carrying>
+    <LastService>1 марта 2017 г.</LastService>
+  </Airplane>
+  <Airplane>
+    <crewMember>
+      <CrewMember>
+        <Firstname>Perviy</Firstname>
+        <Surname>Pilot</Surname>
+        <Patronymic>Samoleta</Patronymic>
+        <Post>First pilot</Post>
+        <Age>25</Age>
+        <Experience>5</Experience>
+      </CrewMember>
+      <CrewMember>
+        <Firstname>Vtoroy</Firstname>
+        <Surname>Pilot</Surname>
+        <Patronymic />
+        <Post>Second pilot</Post>
+        <Age>23</Age>
+        <Experience>5</Experience>
+      </CrewMember>
+    </crewMember>
+    <crewNumb>2</crewNumb>
+    <Id>2</Id>
+    <Type>Transporter</Type>
+    <Model>Boevoi samolet</Model>
+    <Places>60</Places>
+    <IssueYear>1985</IssueYear>
+    <Carrying>15000</Carrying>
+    <LastService>1 марта 2017 г.</LastService>
+  </Airplane>
+  <Airplane>
+    <crewMember>
+      <CrewMember>
+        <Firstname>Ya</Firstname>
+        <Surname>Pilot</Surname>
+        <Patronymic />
+        <Post>First pilot</Post>
+        <Age>54</Age>
+        <Experience>15</Experience>
+      </CrewMember>
+    </crewMember>
+    <crewNumb>1</crewNumb>
+    <Id>3</Id>
+    <Type>Passenger</Type>
+    <Model>Airbus</Model>
+    <Places>53</Places>
+    <IssueYear>1950</IssueYear>
+    <Carrying>156</Carrying>
+    <LastService>24 марта 2017 г.</LastService>
+  </Airplane>
+  <Airplane>
+    <crewMember>
+      <CrewMember>
+        <Firstname>Papa</Firstname>
+        <Surname>Tvoi</Surname>
+        <Patronymic>Viktorovich</Patronymic>
+        <Post>First pilot</Post>
+        <Age>45</Age>
+        <Experience>15</Experience>
+      </CrewMember>
+      <CrewMember>
+        <Firstname>Dyadya</Firstname>
+        <Surname>Moi</Surname>
+        <Patronymic>Olgovich</Patronymic>
+        <Post>Second pilot</Post>
+        <Age>34</Age>
+        <Experience>8</Experience>
+      </CrewMember>
+    </crewMember>
+    <crewNumb>2</crewNumb>
+    <Id>4</Id>
+    <Type>Passenger</Type>
+    <Model>Boeing228</Model>
+    <Places>100</Places>
+    <IssueYear>2000</IssueYear>
+    <Carrying>10000</Carrying>
+    <LastService>16 ноября 2016 г.</LastService>
+  </Airplane>
+  <Airplane>
+    <crewMember>
+      <CrewMember>
+        <Firstname>Yury</Firstname>
+        <Surname>Mikhnovets</Surname>
+        <Patronymic>Pavlovich</Patronymic>
+        <Post>First pilot</Post>
+        <Age>34</Age>
+        <Experience>16</Experience>
+      </CrewMember>
+      <CrewMember>
+        <Firstname>Anton</Firstname>
+        <Surname>Reyn</Surname>
+        <Patronymic>Edwardovich</Patronymic>
+        <Post>Second pilot</Post>
+        <Age>33</Age>
+        <Experience>11</Experience>
+      </CrewMember>
+      <CrewMember>
+        <Firstname>Ann</Firstname>
+        <Surname>Kekaway</Surname>
+        <Patronymic>Antonovna</Patronymic>
+        <Post>Hostess</Post>
+        <Age>24</Age>
+        <Experience>5</Experience>
+      </CrewMember>
+    </crewMember>
+    <crewNumb>3</crewNumb>
+    <Id>5</Id>
+    <Type>Passenger</Type>
+    <Model>Airbus</Model>
+    <Places>191</Places>
+    <IssueYear>2015</IssueYear>
+    <Carrying>20000</Carrying>
+    <LastService>1 декабря 2016 г.</LastService>
+  </Airplane>
+  <Airplane>
+    <crewMember>
+      <CrewMember>
+        <Firstname>Usama</Firstname>
+        <Surname>Ben</Surname>
+        <Patronymic>Laden</Patronymic>
+        <Post>Second pilot</Post>
+        <Age>45</Age>
+        <Experience>5</Experience>
+      </CrewMember>
+      <CrewMember>
+        <Firstname>Ne</Firstname>
+        <Surname>Terrorist</Surname>
+        <Patronymic />
+        <Post>First pilot</Post>
+        <Age>37</Age>
+        <Experience>3</Experience>
+      </CrewMember>
+    </crewMember>
+    <crewNumb>2</crewNumb>
+    <Id>6</Id>
+    <Type>Transporter</Type>
+    <Model>Eeee samolet</Model>
+    <Places>63</Places>
+    <IssueYear>1950</IssueYear>
+    <Carrying>1234</Carrying>
+    <LastService>3 апреля 2017 г.</LastService>
+  </Airplane>
+</ArrayOfAirplane>

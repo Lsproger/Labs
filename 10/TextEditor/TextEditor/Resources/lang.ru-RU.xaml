@@ -13,5 +13,6 @@
     <v:String x:Key="mItemEdit_Cut">Вырезать</v:String>
     <v:String x:Key="iPannel_NumberOfCharacters">Количество символов</v:String>
     <v:String x:Key="iPannel_Scale">Масштаб</v:String>
-    
+    <v:String x:Key="mLastFiles">Последние файлы</v:String>
+
 </ResourceDictionary>

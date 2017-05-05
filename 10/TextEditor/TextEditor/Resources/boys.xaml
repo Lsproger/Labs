@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TextEditor.Resources"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib"
+                    xmlns:Custom="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon">
+    <Style TargetType="Menu">
+        <Setter Property="Menu.FontFamily" Value="Calibri"></Setter>
+        <Setter Property="Menu.FontSize" Value="14"></Setter>
+        <Setter Property="Menu.FontWeight" Value="Bold"></Setter>
+        <Setter Property="Menu.Background" Value="LightPink"/>
+    </Style>
+    <Style TargetType="RichTextBox"> 
+        <Setter Property="Background" Value="LightPink"/>
+    </Style>
+
+    <Style TargetType="ToolBar">
+        <Setter Property="Background" Value="LightPink"/>
+    </Style>
+</ResourceDictionary>

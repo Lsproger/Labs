@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <crewMember>
+    <CrewMember>
+      <Firstname>Anton</Firstname>
+      <Surname>Nevzorov</Surname>
+      <Patronymic />
+      <Post>First pilot</Post>
+      <Age>54</Age>
+      <Experience>21</Experience>
+    </CrewMember>
+    <CrewMember>
+      <Firstname>Vadim</Firstname>
+      <Surname>Miliy</Surname>
+      <Patronymic />
+      <Post>Second pilot</Post>
+      <Age>47</Age>
+      <Experience>15</Experience>
+    </CrewMember>
+  </crewMember>
+  <crewNumb>2</crewNumb>
+  <Id>7</Id>
+  <Type>Military</Type>
+  <Model>Pervaya</Model>
+  <Places>172</Places>
+  <IssueYear>1985</IssueYear>
+  <Carrying>1488</Carrying>
+  <LastService>29 марта 2017 г.</LastService>
+</Airplane>

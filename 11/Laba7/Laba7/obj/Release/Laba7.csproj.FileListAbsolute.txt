@@ -1,0 +1,10 @@
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\bin\Release\Laba7.exe.config
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\bin\Release\Laba7.exe
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\bin\Release\Laba7.pdb
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Release\Laba7.FAddAirplane.resources
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Release\Laba7.FAirport.resources
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Release\Laba7.FAddCrewMember.resources
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Release\Laba7.Properties.Resources.resources
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Release\Laba7.csproj.GenerateResource.Cache
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Release\Laba7.exe
+D:\Учёба\ООП\2 семестр\Labs\7\Laba7\Laba7\obj\Release\Laba7.pdb

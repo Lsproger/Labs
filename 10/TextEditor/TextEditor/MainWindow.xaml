@@ -8,21 +8,14 @@
         mc:Ignorable="d"
         Title="{DynamicResource w_Title}" Height="350" Width="525" AutomationProperties.Name="_Editor" Icon="Resources/ico.png">
     <Window.Resources>
-        <Style x:Key="ForBoys">
-            <Setter Property="Control.FontFamily" Value="Calibri"></Setter>
-            <Setter Property="Control.FontSize" Value="14"></Setter>
-            <Setter Property="Control.FontWeight" Value="Bold"></Setter>
-            
-            <Setter Property="Control.Background" Value="LightPink"/>
-
-        </Style>
+        
     </Window.Resources>
-    <Grid  Style="{StaticResource ForBoys}">
+    <Grid >
         <DockPanel>
             <StackPanel DockPanel.Dock="Top">
                 <Grid>
                     <StackPanel>
-                        <Menu Margin="0,0,0,0" Style="{StaticResource ForBoys}">
+                        <Menu Margin="0,0,0,0">
                             <Custom:RibbonMenuItem Header="{DynamicResource mItem_File}" Padding="-15,0,0,0" MouseOverBackground="#7F38C9FF">
                                 <Custom:RibbonButton Command="New" Label="{DynamicResource mItemFile_New}" MouseOverBackground="#7F38C9FF" Margin="0">
                                     <Button.CommandBindings>
@@ -39,6 +32,7 @@
                                         <CommandBinding Command = "SaveAs" Executed= "save_ButonClick" />
                                     </Button.CommandBindings>
                                 </Custom:RibbonButton>
+                                <Custom:RibbonButton Label="{DynamicResource mLastFiles}" MouseOverBackground="#7F38C9FF" Click="RibbonButton_Click"/>
                             </Custom:RibbonMenuItem>
                             <Custom:RibbonMenuItem Header="{DynamicResource mItem_Edit}" Padding="-15,0,0,0" >
                                 <Custom:RibbonMenuItem Header="{DynamicResource mItemEdit_Copy}" Command="Copy" CommandTarget="{Binding ElementName=richTextBox}"/>
@@ -56,8 +50,12 @@
                                     </TransformGroup>
                                 </Custom:RibbonButton.RenderTransform>
                             </Custom:RibbonButton>
-                            <Button Style="{DynamicResource mlya}" Content="Lolkek">
+                            <Button Style="{DynamicResource DialogButtonStyle}"  Width="40"  Content="Lol">
                             </Button>
+                            <Button Style="{StaticResource Dial}" Width="50" Content="kek">
+                            </Button>
+                            <ComboBox Name="Theme">
+                            </ComboBox>
                         </Menu>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Right">
@@ -65,8 +63,8 @@
                         </Menu>
                     </StackPanel>
                 </Grid>
-                <ToolBarPanel Margin="-4,-1,-1,0">
-                    <ToolBar  Style="{StaticResource ForBoys}">
+                <ToolBarPanel Margin="-4,-1,-1,-1">
+                    <ToolBar>
                         <Custom:RibbonButton ToolTip="New file" SmallImageSource="Resources/new.png"  Command = "New" FocusedBackground="#FF37E4FF" MouseOverBackground="#5937E4FF">
                             <Button.CommandBindings >
                                 <CommandBinding Command = "New" Executed= "new_ButonClick" />
@@ -111,17 +109,19 @@
                 </Grid.Background>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="{DynamicResource iPannel_NumberOfCharacters}"/>
-                    <TextBox Name="_numbOfChar" BorderThickness="0" VerticalContentAlignment="Center" Background="{x:Null}"/>
+                    <TextBox Style="{StaticResource _dataTr}" Name="_numbOfChar" BorderThickness="0" VerticalContentAlignment="Center" Background="{x:Null}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Label HorizontalAlignment="Right" Content="{DynamicResource iPannel_Scale}"/>
                     <Custom:RibbonButton SmallImageSource="Resources/minus.png" VerticalAlignment="Center" Click="MinusButton_Click"/>
-                    <Slider Name="_ScaleSlider" Value="100" IsSnapToTickEnabled="True" Minimum="10" Maximum="400" TickPlacement="BottomRight" TickFrequency="10" LargeChange="10" VerticalAlignment="Center" Width="80"/>
+                    <Slider Name="_ScaleSlider" Value="100" IsSnapToTickEnabled="True" Minimum="10" Maximum="400" TickPlacement="BottomRight" TickFrequency="10" LargeChange="10" VerticalAlignment="Center" Width="80" Background="{x:Null}"/>
                     <Custom:RibbonButton SmallImageSource="Resources/plus.png" VerticalAlignment="Center" Click="PlusButton_Click"/>
-                    <Custom:RibbonTextBox Name="_ScaleValue" Width="40" Label="100%"/>
+                    <Custom:RibbonTextBox  Name="_ScaleValue" Width="40" Label="100%"/>
                 </StackPanel>
             </Grid>
-            <RichTextBox Style="{StaticResource ForBoys}" Background="#FFFDC8F6" x:Name="richTextBox" BorderThickness="0" PreviewDragEnter="RichTextBox_DragEnter" PreviewDragOver="RichTextBox_DragOver" PreviewDrop="RichTextBox_Drop" RenderTransformOrigin="0,0" Width="517" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+            <Grid x:Name="RtbGrid" Background="Black">
+                <RichTextBox x:Name="richTextBox" BorderThickness="0" PreviewDragEnter="RichTextBox_DragEnter" PreviewDragOver="RichTextBox_DragOver" PreviewDrop="RichTextBox_Drop" RenderTransformOrigin="0,0" Width="517" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+            </Grid>
         </DockPanel>
     </Grid>
 </Window>

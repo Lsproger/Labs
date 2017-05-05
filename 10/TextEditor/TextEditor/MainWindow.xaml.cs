@@ -17,6 +17,7 @@ using WPFColorPickerLib;
 using System.Windows.Threading;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using System.Xml.Linq;
 
 namespace TextEditor
 {
@@ -38,8 +39,8 @@ namespace TextEditor
             timer.Tick += Timer_Tick;
             _ScaleSlider.ValueChanged += _ScaleSlider_ValueChanged;
             timer.Interval = new TimeSpan(1000000);
-            timer.Start();
-            _Editor.Loaded += Form_Loaded;
+           // timer.Start();
+            this.Loaded += Form_Loaded;
             this.Title += numbOfWindows;
             numbOfWindows++;
             richTextBox.AddHandler(RichTextBox.DragOverEvent, new DragEventHandler(RichTextBox_DragOver), true);
@@ -50,20 +51,35 @@ namespace TextEditor
             CultureInfo currLang = App.Language;
 
             //Заполняем меню смены языка:
-            menuLanguage.Items.Clear();
-            foreach (var lang in App.Languages)
-            {
-                MenuItem menuLang = new MenuItem();
-                menuLang.Header = lang.DisplayName;
-                menuLang.Tag = lang;
-                menuLang.IsChecked = !lang.Equals(currLang);
-                menuLang.Click += ChangeLanguageClick;
-                menuLanguage.Items.Add(menuLang);
-            }
-            menuLanguage.Style = (Style)_Editor.FindResource("ForBoys");
+            //menuLanguage.Items.Clear();
+            //foreach (var lang in App.Languages)
+            //{
+            //    MenuItem menuLang = new MenuItem();
+            //    menuLang.Header = lang.DisplayName;
+            //    menuLang.Tag = lang;
+            //    menuLang.IsChecked = !lang.Equals(currLang);
+            //    menuLang.Click += ChangeLanguageClick;
+            //    menuLanguage.Items.Add(menuLang);
+            //}
+            //menuLanguage.Style = (Style)_Editor.FindResource("ForBoys");
+
+            List<string> styles = new List<string> { "boys", "girls" };
+            Theme.SelectionChanged += ThemeChange;
+            Theme.ItemsSource = styles;
+            Theme.SelectedItem = "boys";
+
         }
 
-        private void _ScaleSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void ThemeChange(object sender, SelectionChangedEventArgs e)
+        {
+            string style = Theme.SelectedItem as string; // определяем путь к файлу ресурсов 
+            var uri = new Uri("Resources\\"+style + ".xaml", UriKind.Relative); // загружаем словарь ресурсов 
+            ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary; // очищаем коллекцию ресурсов приложения 
+            Application.Current.Resources.Clear(); // добавляем загруженный словарь ресурсов 
+            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+        } 
+
+            private void _ScaleSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             _ScaleValue.Label = _ScaleSlider.Value + "%";
             richTextBox.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
@@ -126,6 +142,27 @@ namespace TextEditor
                     {
                         documentTextRange.Save(fs, DataFormats.Rtf);
                     }
+
+                    {
+                        XDocument doc = XDocument.Load("legend.xml");
+                        if (Convert.ToInt32(doc.Root.Element("numb").Value) <= 10)
+                        {
+                            XElement path = new XElement("path");
+                            path.Value = save.FileName;
+                            doc.Root.Add(path);
+                            doc.Root.Element("numb").Value = (Convert.ToInt32(doc.Root.Element("numb").Value) + 1).ToString();
+                            doc.Save("legend.xml");
+                        }
+                        else
+                        {
+                            doc.Root.Element("path").Remove();
+                            XElement path = new XElement("path");
+                            path.Value = save.FileName;
+                            doc.Root.Add(path);
+                            doc.Root.Element("numb").Value = (Convert.ToInt32(doc.Root.Element("numb").Value) + 1).ToString();
+                            doc.Save("legend.xml");
+                        }
+                    }
                 }
             }
         }
@@ -148,7 +185,29 @@ namespace TextEditor
                     else tr.Load(fs, DataFormats.Xaml);
                 }
                 this.Title = openFile.FileName;
+                {
+                    XDocument doc = XDocument.Load("legend.xml");
+                    if (Convert.ToInt32(doc.Root.Element("numb").Value) <= 10)
+                    {
+                        XElement path = new XElement("path");
+                        path.Value = openFile.FileName;
+                        doc.Root.Add(path);
+                        doc.Root.Element("numb").Value = (Convert.ToInt32(doc.Root.Element("numb").Value) + 1).ToString();
+                        doc.Save("legend.xml");
+                    }
+                    else
+                    {
+                        doc.Root.Element("path").Remove();
+                        XElement path = new XElement("path");
+                        path.Value = openFile.FileName;
+                        doc.Root.Add(path);
+                        doc.Root.Element("numb").Value = (Convert.ToInt32(doc.Root.Element("numb").Value) + 1).ToString();
+                        doc.Save("legend.xml");
+                    }
+                }
             }
+
+
 
             // Копирование содержимого документа в MemoryStream. 
             //using (MemoryStream stream = new MemoryStream())
@@ -278,6 +337,13 @@ namespace TextEditor
                 }
             }
 
+        }
+
+        private void RibbonButton_Click(object sender, RoutedEventArgs e)
+        {
+            LastFiles lf = new LastFiles();
+            lf.Owner = this;
+            lf.Show();
         }
     }
 

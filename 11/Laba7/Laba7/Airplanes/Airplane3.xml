@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <crewNumb>1</crewNumb>
+  <crewMember>
+    <CrewMember>
+      <Firstname>Ya</Firstname>
+      <Surname>Pilot</Surname>
+      <Patronymic />
+      <Post>First pilot</Post>
+      <Age>54</Age>
+      <Experience>15</Experience>
+    </CrewMember>
+  </crewMember>
+  <Id>3</Id>
+  <Type>Passenger</Type>
+  <Model>Airbus</Model>
+  <Places>53</Places>
+  <IssueYear>1950</IssueYear>
+  <Carrying>156</Carrying>
+  <LastService>24 марта 2017 г.</LastService>
+</Airplane>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Airplane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <crewNumb>2</crewNumb>
+  <crewMember>
+    <CrewMember>
+      <Firstname>Perviy</Firstname>
+      <Surname>Pilot</Surname>
+      <Patronymic>Samoleta</Patronymic>
+      <Post>First pilot</Post>
+      <Age>25</Age>
+      <Experience>5</Experience>
+    </CrewMember>
+    <CrewMember>
+      <Firstname>Vtoroy</Firstname>
+      <Surname>Pilot</Surname>
+      <Patronymic />
+      <Post>Second pilot</Post>
+      <Age>23</Age>
+      <Experience>5</Experience>
+    </CrewMember>
+  </crewMember>
+  <Id>2</Id>
+  <Type>Transporter</Type>
+  <Model>Boevoi samolet</Model>
+  <Places>60</Places>
+  <IssueYear>1985</IssueYear>
+  <Carrying>15000</Carrying>
+  <LastService>1 марта 2017 г.</LastService>
+</Airplane>
