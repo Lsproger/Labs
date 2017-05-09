@@ -42,8 +42,8 @@ namespace Laba7
 
         private void Airport_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "airportDataSet2.Airplanes". При необходимости она может быть перемещена или удалена.
-            this.airplanesTableAdapter.Fill(this.airportDataSet2.Airplanes);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "airportDataSet.Airplanes". При необходимости она может быть перемещена или удалена.
+            this.airplanesTableAdapter.Fill(this.airportDataSet.Airplanes);
             // _listPl.Font = new Font(new FontFamily("Times New Roman"), 20);
             //using (MyDbContext db = new MyDbContext())
             //{
@@ -58,65 +58,65 @@ namespace Laba7
             FAddAirplane addPlane = new FAddAirplane();     //Создание формы для добавления самолёта
             addPlane.Show();
         }
-        
 
 
-            
-            //private int CaptainComparator(Airplane A, Airplane B)
-            //{
-            //    if (A.GetCap().Firstname[0] != B.GetCap().Firstname[0])
-            //    {
-            //        if (Convert.ToSByte(A.GetCap().Firstname[0]) < Convert.ToSByte(B.GetCap().Firstname[0]))
-            //            return -1;
-            //        else
-            //            return 1;
 
-            //    }
-            //    else if (A.GetCap().Firstname[0] == B.GetCap().Firstname[0] && A.GetCap().Firstname[1] != B.GetCap().Firstname[1])
-            //    {
-            //        if (Convert.ToSByte(A.GetCap().Firstname[1]) < Convert.ToSByte(B.GetCap().Firstname[1]))
-            //            return -1;
-            //        else
-            //            return 1;
-            //    }
-            //    else return 0;
-            //}
-            //private int PilotComparator(Airplane A, Airplane B)
-            //{
 
-            //    if (A.GetPil().Firstname[0] != B.GetPil().Firstname[0])
-            //    {
-            //        if (Convert.ToSByte(A.GetPil().Firstname[0]) < Convert.ToSByte(B.GetPil().Firstname[0]))
-            //            return -1;
-            //        else
-            //            return 1;
+        //private int CaptainComparator(Airplane A, Airplane B)
+        //{
+        //    if (A.GetCap().Firstname[0] != B.GetCap().Firstname[0])
+        //    {
+        //        if (Convert.ToSByte(A.GetCap().Firstname[0]) < Convert.ToSByte(B.GetCap().Firstname[0]))
+        //            return -1;
+        //        else
+        //            return 1;
 
-            //    }
-            //    else if (A.GetPil().Firstname[0] == B.GetPil().Firstname[0] && A.GetPil().Firstname[1] != B.GetPil().Firstname[1])
-            //    {
-            //        if (Convert.ToSByte(A.GetPil().Firstname[1]) < Convert.ToSByte(B.GetPil().Firstname[1]))
-            //            return -1;
-            //        else
-            //            return 1;
-            //    }
-            //    else return 0;
-            //}
-            //private int LTOComparator(Airplane A, Airplane B)
-            //{
+        //    }
+        //    else if (A.GetCap().Firstname[0] == B.GetCap().Firstname[0] && A.GetCap().Firstname[1] != B.GetCap().Firstname[1])
+        //    {
+        //        if (Convert.ToSByte(A.GetCap().Firstname[1]) < Convert.ToSByte(B.GetCap().Firstname[1]))
+        //            return -1;
+        //        else
+        //            return 1;
+        //    }
+        //    else return 0;
+        //}
+        //private int PilotComparator(Airplane A, Airplane B)
+        //{
 
-            //    if (Convert.ToDateTime(A.LastService) < Convert.ToDateTime(B.LastService))
-            //        return 1;
+        //    if (A.GetPil().Firstname[0] != B.GetPil().Firstname[0])
+        //    {
+        //        if (Convert.ToSByte(A.GetPil().Firstname[0]) < Convert.ToSByte(B.GetPil().Firstname[0]))
+        //            return -1;
+        //        else
+        //            return 1;
 
-            //    else if (Convert.ToDateTime(A.LastService) > Convert.ToDateTime(B.LastService))
-            //        return -1;
-            //    else return 0;
-            //}
-            //#endregion
-            /// <summary>
-            /// Очистка поля элементов и добавление TextBox для вывода результата
-            /// </summary>
+        //    }
+        //    else if (A.GetPil().Firstname[0] == B.GetPil().Firstname[0] && A.GetPil().Firstname[1] != B.GetPil().Firstname[1])
+        //    {
+        //        if (Convert.ToSByte(A.GetPil().Firstname[1]) < Convert.ToSByte(B.GetPil().Firstname[1]))
+        //            return -1;
+        //        else
+        //            return 1;
+        //    }
+        //    else return 0;
+        //}
+        //private int LTOComparator(Airplane A, Airplane B)
+        //{
 
-        
+        //    if (Convert.ToDateTime(A.LastService) < Convert.ToDateTime(B.LastService))
+        //        return 1;
+
+        //    else if (Convert.ToDateTime(A.LastService) > Convert.ToDateTime(B.LastService))
+        //        return -1;
+        //    else return 0;
+        //}
+        //#endregion
+        /// <summary>
+        /// Очистка поля элементов и добавление TextBox для вывода результата
+        /// </summary>
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -124,9 +124,32 @@ namespace Laba7
             nm.Show();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (var cell in dataGridView1.SelectedCells)
+            {
+                if (cell is DataGridViewButtonCell) dataGridView1.Rows.RemoveAt((cell as DataGridViewButtonCell).RowIndex);
+            }
+        }
+
+        private void _saveChanges_Click(object sender, EventArgs e)
+        {
+            airplanesTableAdapter.Update(airportDataSet);
+            MessageBox.Show("Изменения сохранены!");
+        }
+
+        private void _sortAP_Click(object sender, EventArgs e)
+        {
+            DataGridViewColumn cmn = dataGridView1.Columns.GetFirstColumn(DataGridViewElementStates.Selected);
+            dataGridView1.Sort(cmn, ListSortDirection.Ascending);
+        }
+
         //private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         //{
         //    (sender as DataGridView).Sele
         //    MessageBox.Show((sender as DataGrid)..ToString());
         //}
-    } }
+
+
+    }
+}
