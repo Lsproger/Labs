@@ -26,3 +26,4 @@ D:\Учёба\ООП\2 семестр\Labs\11\Laba7\Laba7\bin\Debug\EntityFramew
 D:\Учёба\ООП\2 семестр\Labs\11\Laba7\Laba7\bin\Debug\EntityFramework.xml
 D:\Учёба\ООП\2 семестр\Labs\11\Laba7\Laba7\bin\Debug\EntityFramework.SqlServer.xml
 D:\Учёба\ООП\2 семестр\Labs\11\Laba7\Laba7\bin\Debug\ru\EntityFramework.resources.dll
+D:\Учёба\ООП\2 семестр\Labs\11\Laba7\Laba7\obj\Debug\Laba7.Cre.resources

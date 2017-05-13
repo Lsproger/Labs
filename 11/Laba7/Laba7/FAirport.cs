@@ -120,7 +120,12 @@ namespace Laba7
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FAddCrewMember nm = new FAddCrewMember(1);
+            int Idpl = 1;
+            foreach (var cell in dataGridView1.SelectedCells)
+            {
+                Idpl = (int)(cell as DataGridViewTextBoxCell).Value;
+            }
+            FAddCrewMember nm = new FAddCrewMember(Idpl);
             nm.Show();
         }
 
@@ -140,8 +145,34 @@ namespace Laba7
 
         private void _sortAP_Click(object sender, EventArgs e)
         {
-            DataGridViewColumn cmn = dataGridView1.Columns.GetFirstColumn(DataGridViewElementStates.Selected);
-            dataGridView1.Sort(cmn, ListSortDirection.Ascending);
+            Cre sd = new Cre();
+            sd.Show();
+           // DataGridViewColumn cmn = dataGridView1.Columns.GetFirstColumn(DataGridViewElementStates.Selected);
+            //dataGridView1.Sort(cmn, ListSortDirection.Ascending);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                if (row.Index > 0)
+                {
+                    dataGridView1.Rows[row.Index - 1].Selected = true;
+                    row.Selected = false;
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                if (row.Index < dataGridView1.Rows.Count-1)
+                {
+                    dataGridView1.Rows[row.Index+1].Selected = true;
+                    row.Selected = false;
+                }
+            }
         }
 
         //private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

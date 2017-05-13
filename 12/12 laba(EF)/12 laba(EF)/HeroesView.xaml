@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_12_laba_EF_"
+        xmlns:Custom="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon" x:Class="_12_laba_EF_.HeroesView"
+        mc:Ignorable="d"
+        Title="HeroesView" Height="300" Width="427.734">
+    <Grid>
+        <TextBox x:Name="_name" HorizontalAlignment="Left" Height="23" Margin="10,23,0,0" TextWrapping="Wrap" Text="Hero name" VerticalAlignment="Top" Width="145"/>
+        <TextBox x:Name="_superMight" HorizontalAlignment="Left" Height="23" Margin="160,22,0,0" TextWrapping="Wrap" Text="Supermight" VerticalAlignment="Top" Width="140"/>
+        <TextBox x:Name="_age" HorizontalAlignment="Left" Height="23" Margin="305,22,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Width="54" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="_heroesGrid" HorizontalAlignment="Left" Height="174" Margin="10,55,0,0" VerticalAlignment="Top" Width="400"/>
+        <Custom:RibbonButton x:Name="_add" Label="Add" Background="Aquamarine" Click="_add_Click" Height="25" Width="40" Margin="364,20,16,224"/>
+        <Custom:RibbonButton x:Name="_delete" Label="Delete" Width="50" Height="25" Background="Azure" Margin="10,234,360,10" Click="_delete_Click"/>
+        <Custom:RibbonButton x:Name="_update" Label="Update" Width="50" Height="25" Background="Azure" Margin="360,234,10,10" Click="_update_Click"/>
+        <TextBox x:Name="_idH" HorizontalAlignment="Left" Height="23" Margin="91,234,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top" Width="120"/>
+        <Custom:RibbonButton x:Name="_asSearch" Label="1" Height="23" Background="BlanchedAlmond" Margin="230,234,160,12" Click="_asSearch_Click"/>
+        <Custom:RibbonButton x:Name="_oneMore" Label="2" Height="23" Background="BlanchedAlmond" Margin="270,234,120,12" Click="_asSearch_Click"/>
+
+    </Grid>
+</Window>

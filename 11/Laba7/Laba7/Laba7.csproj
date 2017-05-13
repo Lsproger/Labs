@@ -81,6 +81,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AirportDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AirportDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirportDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cre.Designer.cs">
+      <DependentUpon>Cre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Crewmember.cs" />
     <Compile Include="FAddAirplane.cs">
       <SubType>Form</SubType>
@@ -103,6 +114,9 @@
     <Compile Include="MyDbContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cre.resx">
+      <DependentUpon>Cre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FAddAirplane.resx">
       <DependentUpon>FAddAirplane.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +146,17 @@
     </None>
     <None Include="AirportDataSet.xss">
       <DependentUpon>AirportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AirportDataSet1.xsc">
+      <DependentUpon>AirportDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AirportDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AirportDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AirportDataSet1.xss">
+      <DependentUpon>AirportDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
